@@ -7,12 +7,11 @@ def binarySearch(list, object):
     while(lower <= higher):
         mid = (higher + lower) // 2
         guess = list[mid]
-        if(guess == object):
-            return mid
-        elif(guess < object):
-            lower = mid + 1
-        else:
-            higher = mid - 1
+
+        if(guess == object): return mid
+        elif(guess < object): lower = mid + 1
+        else: higher = mid - 1
+    
     return None
 
-print(binarySearch(lista, 3))
+print(binarySearch(lista, 88))
